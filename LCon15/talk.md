@@ -7,88 +7,203 @@ class: center, middle
 ![](assets/title.png)
 ---
 
-# Agenda
+# Who am I?
 
-1. Introduction
-1. Xen project
-1. Docker
+* Olivier Lambert
+* Xen Orchestra's project leader
+* Using Xen in production since 2007
+* Met a lot of sysadmins from everywhere
 
 ---
 
 # Introduction
 
-* Myself
-* Heard a lot of ops panicked by Docker
-* seen as an invader
+* Why Xen?
+  * mature (2003)
+  * used in very large infrastructures (Amazon, Rackspace...)
+  * I'm used to it
+* Same principles for others (KVM, VMWare...)
+---
 
-<!-- ---
+# Why this talk?
 
-# Abstract
-
-Containers and hypervisors are different technologies. And also they lead to different usage, sometimes contradictory: Xen is a powerful hypervisor, allowing SysAdmins to build strong IT infrastructures, with security, control, resources isolation and flexibility. Docker is a container project bringing simplicity and universality for developers to build, test and ship their applications without thinking of what’s behind it. That’s why if you let everyone create Docker containers on your whole infrastructure, it will surely wreak havoc: CPU, RAM, network or disk usage without limits could lead to very serious problems. This talk will cover how developers can benefit from the flexibility containers provide, while avoiding potential shortcomings. By uniting Linux container and hypervisor technology, developers can get the best of both worlds and answer today’s cloud computing challenges. -->
+* Heard lot of ops/sysadmin worried by Docker
+* We'll see why
+* How to react
 
 ---
 
-# Xen: quick recap
+# Virtual machines
 
-* Out in 2003
-* Huge adoption amongst ops
-* Paravirt
+* IT usage revolution:
+  * hardware abstraction
+  * flexibility
+  * resource control and isolation
+  * resource delegation
+
+---
+# Virtual machines
+
+As an ops, VMs are common stuff
+
+* massive usage in the last 15 years
+* we are used to it:
+  * procedures
+  * supervision
+  * sized infrastructure
+  * we control them
 
 ---
 
-# Xen: huge leap for ops
+# Hypervisors
 
-## Hardware abstraction for total flexibility
+## Built for **ops** needs:
 
-* Migrate, adjust resources
-* Infrastructure easy to scale vertically
-  * adding CPUs, RAM in live
-  * migrate to better servers
-
----
-
-# Docker
-
-* Out in 2013
-* Huge adoption amongst devs
-* Using *LXC* underneath
-
-## "Give the developers the way to innovate"
+* live migration
+* storage migration
+* adjust VM resources in live (CPUs, RAM, disks)
+* good isolation (security)
+* run almost any OS on top of hypervisor
+* lot of tools to administrate (CLI, GUI)
 
 ---
 
-# Docker: huge leap for devs
+# Docker: quick tour
 
-* Download a container with the working app inside
-* Hack it right now on their own box
-* Push it elsewhere when done
+* LXC Container + API to manage them
+* out in 2013
+* environment abstraction
+* build for **devs** needs:
+
+**Build, ship, and run any app, anywhere**
+
+* it means for a dev:
+  1. **something working on his laptop** running Docker...
+  1. ...will work anywhere else!
+
+---
+class: center, middle
+
+# Devs first thought:
+
+
+![](assets/dockerall.png)
+
+---
+class: center, middle
+
+*No more extremist ops to convince for installing*
+
+*{insert any controversial technology here}*
+
+![](assets/chains-broken.jpg)
+
+---
+class: center, middle
+
+# Ops first thought
+
+
+![](assets/unicorn.jpg)
 
 ---
 
-# So what's the problem?
+# Why?
 
-* Devs tends to forget their app need an infrastructure to work
-* They start to push stuff everywhere
+* Ops fear this:
+  * blackbox syndrome (unknown container content)
+  * perf impact on the on infrastructure
+  * security impact
+  * maintenance?
+
+Let's recap:
+
+### The power of a developer to push something unknown, anywhere*.
+
+\*: where Docker is installed, of course.
+
+---
+
+# Overcome the fear
+
+3 complementary ways:
+
+1. **Ops**: prepare your infrastructure for Docker workflow
+1. **Devs**: learn how to use Docker correctly, step by step
+1. More teamwork together and/or have **Devops**
+
+---
+
+# General architecture
+
+Type 1 Hypervisor (left) / Container (right)
+
+---
+
+# Detailed architecture
+
+Xen (left) / Docker (right)
+
+---
+
+# Together
+
+# Is it bad together?
+
+Previous slide: basically, Amazon Web Service.
+
+**Docker on top of Xen is already done since Docker exists**
 
 ---
 
 # As an ops...
 
-* Your dev team will probably use Docker
-* So be prepare your infrastructure
-  * start to dedicate VMs for Docker (at least in dev env)
-  * think about later if it goes in production
+1. Start to dedicate VMs for Docker
+  * play with it to understand basic principles
+  * automatize (template/config) to deploy new Docker VMs quicker
+  * start with dedicated VMs for dev environment
+
+1. Gather metrics and trends
+  * this way you'll understand what is going on
+  * you'll recognize load/pattern behavior later in production
+
+1. Extend the dev environment to test
+
+1. Go in production
+
+### These steps are done in parallel with your dev team
+
 ---
 
 # As a dev...
 
-* Start to play with Docker on your own box
-* Master your workflow in dev env
-* Continuous integration
-* **THEN** go in production
+1. Start to play with Docker on your own box
+  * like **ops**, understand basic principles and workflow
+  * learn best practices
+  * Docker registry
+
+1. Master your workflow in this dev environment (dev VMs)
+  * teamwork with Docker
+  * split your app in small bricks
+  * Docker compose
+
+1. Start to use it for continuous integration and tests
+  * it should be painless, or you have problems
+  * good experience before going live
+
+1. **THEN** go in production
 
 ---
+
+# No fear!
+
+#### It's more a matter of workflow and human relationship than technology
+
+#### Take your time! Remember how much time to master Virtual Machines?
+
+#### ~1 year to master Docker workflow
+
+
 <!--
 # Ideas
 
