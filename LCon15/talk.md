@@ -269,7 +269,7 @@ Except:
 
 #### Take your time! Remember how much time to master Virtual Machines?
 
-#### ~1 year to master Docker workflow
+#### ~1 year for a devs+ops team to master Docker workflow
 
 ---
 
@@ -298,19 +298,37 @@ More "glue" to integrate containers in existing VM tools/workflows:
 
 ---
 
-# Possibilities: more stack visibility
+# More stack visibility
 
-Visualization (map) of the whole stack (host/VM/container):
+Live visualization (map) of the whole stack (host/VM/container):
+
+.center[![](assets/circlepacking.png)]
 
 ---
 
-# Possibilities: more feedback
+# More feedback
 
 Advanced Docker metrics view inside a VM:
+
+.center[![](assets/metrics.png)]
+
+* running containers usage, cumulated (by metric)
+* container "color" depending of all resources usage
+
 ---
 
-# Possibilities: auto scaling
+# Auto scaling
 
-* Vertical scaling: autoscale VMs via container perfs analysis (more CPUs/RAM etc.)
+* Vertical scaling
+  * autoscale VMs perfs (CPUs/RAM etc.)
+  * fine scaling by combining Xen and Docker usage
 
-* Horizontal scaling: create Docker ready VMs on new/other servers (on demand)
+* Horizontal scaling
+  * create Docker ready VMs on new/other servers (on demand)
+  * Docker-driven VM deployment on specific set of resources
+
+---
+
+# Questions?
+
+.center[![](assets/question.jpg)]
