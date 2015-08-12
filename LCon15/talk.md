@@ -333,7 +333,7 @@ Advanced Docker metrics view inside a VM:
   * create Docker ready VMs on new/other servers (on demand)
   * Docker-driven VM deployment on specific set of resources
   * Docker orchestration tools (like Kubernetes) drivers for XenServer/Xen Orchestra
-  * **DO NOT** reinvent the wheel, just focusing to deliver a consistent experience for devs, ops and devops
+  * **DO NOT** reinvent the wheel, just focusing to deliver a consistent experience for **Ops** and DevOps without bothering devs (and *vice-versa*)
 
 ---
 
