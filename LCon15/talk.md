@@ -118,6 +118,7 @@ class: center, middle
 # Why?
 
 * Ops fear is:
+
   * blackbox syndrome (unknown container content)
   * performance impact on the infrastructure?
   * security impact?
@@ -161,11 +162,15 @@ We'll do this:
 
 # Global architecture
 
+Here picture of Xen arch side by side with Docker arch
+
 .center[![schema n1]()]
 
 ---
 
 # Uniting powers
+
+Here picture of Docker arch on top of Xen arch
 
 .center[![schema n2]()]
 
@@ -265,7 +270,7 @@ Except:
 
 # No fear!
 
-#### It's more a matter of workflow and human relationship than technology
+#### It's more a matter of workflow and human relationships than technology
 
 #### Take your time! Remember how much time to master Virtual Machines?
 
@@ -312,8 +317,8 @@ Advanced Docker metrics view inside a VM:
 
 .center[![](assets/metrics.png)]
 
-* running containers usage, cumulated (by metric)
-* container "color" depending of all resources usage
+* Running containers usage, cumulated (by metric)
+* Container "color" depending of all resources usage
 
 ---
 
