@@ -297,7 +297,7 @@ More "glue" to integrate containers in existing VM tools/workflows:
 
 * Docker has a great API
 * "Bridges" started to appear recently (e.g: XenServer plugin connected to Docker API)
-* Just need some lego works
+* Just need some lego works and imagination
 
 .center[![](assets/legos.jpg)]
 
@@ -324,13 +324,16 @@ Advanced Docker metrics view inside a VM:
 
 # Auto scaling
 
-* Vertical scaling
+* Vertical scaling?
   * autoscale VMs perfs (CPUs/RAM etc.)
   * fine scaling by combining Xen and Docker usage
+  * "like" Amazon ECS Service Scheduler but on your own hardware
 
-* Horizontal scaling
+* Horizontal scaling?
   * create Docker ready VMs on new/other servers (on demand)
   * Docker-driven VM deployment on specific set of resources
+  * Docker orchestration tools (like Kubernetes) drivers for XenServer/Xen Orchestra
+  * **DO NOT** reinvent the wheel, just focusing to deliver a consistent experience for devs, ops and devops
 
 ---
 
