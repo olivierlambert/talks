@@ -12,7 +12,7 @@ class: center, middle
 * Olivier Lambert
 * Xen Orchestra's project leader (https://xen-orchestra.com)
 * Using Xen in production since 2007
-* Met a lot of Xen sysadmins
+* Met a lot of Xen sysadmins/ops
 
 <br/>
 <br/>
@@ -117,7 +117,7 @@ class: center, middle
 
 # Why?
 
-* Ops fear is:
+* Ops fears are:
 
   * blackbox syndrome (unknown container content)
   * performance impact on the infrastructure?
@@ -178,7 +178,7 @@ Here picture of Docker arch on top of Xen arch
 
 # Results
 
-* Good sides of Xen for **Ops**:
+* Bright side of Xen for **Ops**:
   * all VM flexibility/security package
   * no architecture change
   * Docker resources capped by your VMs...
@@ -334,6 +334,14 @@ Advanced Docker metrics view inside a VM:
   * Docker-driven VM deployment on specific set of resources
   * Docker orchestration tools (like Kubernetes) drivers for XenServer/Xen Orchestra
   * **DO NOT** reinvent the wheel, just focusing to deliver a consistent experience for **Ops** and DevOps without bothering devs (and *vice-versa*)
+
+---
+
+# Acknowledgements
+
+* Jérôme Petazzoni (*Docker Inc.*)
+
+* Lars Kurth (*Xen Project*)
 
 ---
 
