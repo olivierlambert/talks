@@ -162,17 +162,13 @@ We'll do this:
 
 # Global architecture
 
-Here picture of Xen arch side by side with Docker arch
-
-.center[![schema n1]()]
+.center[![schema n1](assets/xendockerarch.png)]
 
 ---
 
 # Uniting powers
 
-Here picture of Docker arch on top of Xen arch
-
-.center[![schema n2]()]
+.center[![schema n2](assets/xdarch.jpg)]
 
 ---
 
