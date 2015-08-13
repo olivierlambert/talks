@@ -6,6 +6,12 @@ class: center, middle
 
 ![](assets/title.png)
 ---
+<!--  TODO
+
+* talking about pet vs cattle? i.e VM stays, containers don't
+* check what about "Hyper" project, "Intel Xen Container"
+* from the previous point: slide 26, improvement reduce overhead
+-->
 
 # Who am I?
 
