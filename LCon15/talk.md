@@ -162,13 +162,13 @@ We'll do this:
 
 # Global architecture
 
-.center[![schema n1](assets/xendockerarch.png)]
+.center[![schema n1](assets/x1.jpg)]
 
 ---
 
 # Uniting powers
 
-.center[![schema n2](assets/xdarch.jpg)]
+.center[![schema n2](assets/x2.jpg)]
 
 ---
 
