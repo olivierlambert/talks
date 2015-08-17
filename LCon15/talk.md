@@ -182,6 +182,18 @@ class: center, middle
 
 ---
 
+# Comparing
+
+.center[![schema n1](assets/x1.jpg)]
+
+---
+
+# Solution
+
+.center[![schema n2](assets/x2.jpg)]
+
+---
+
 # Solution
 
 If Docker is a boat shipping containers...
@@ -195,18 +207,6 @@ If Docker is a boat shipping containers...
 We'll do this:
 
 .center[![](assets/xen-docker.jpg)]
-
----
-
-# Global architecture
-
-.center[![schema n1](assets/x1.jpg)]
-
----
-
-# Uniting powers
-
-.center[![schema n2](assets/x2.jpg)]
 
 ---
 
@@ -362,12 +362,14 @@ Advanced Docker metrics view inside a VM:
 
 # Auto scaling
 
-* Vertical scaling?
+* Vertical scaling: more resources for existing Docker instances
+
   * autoscale VMs perfs (CPUs/RAM etc.)
   * fine scaling by combining Xen and Docker usage
   * "like" Amazon ECS Service Scheduler but on your own hardware
 
-* Horizontal scaling?
+* Horizontal scaling: more Docker instances
+
   * create Docker ready VMs on new/other servers (on demand)
   * Docker-driven VM deployment on specific set of resources
   * Docker orchestration tools (like Kubernetes) drivers for XenServer/Xen Orchestra
